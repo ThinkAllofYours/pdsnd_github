@@ -199,6 +199,17 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+def display_raw_data(df):
+    """Ask the user if they want to display the raw data and print 5 rows at a time."""
+    view_data = input("Would you like to view 5 rows of individual trip data? Enter yes or no: ").lower()
+    start_loc = 0
+    while view_data == 'yes':
+        print(df.iloc[start_loc:start_loc+5])
+        start_loc += 5
+        view_data = input("Do you wish to continue yes or no?: ").lower()
+        while view_data not in ['yes', 'no']:
+            print("Invalid input. Please enter yes or no.")
+            view_data = input("Do you wish to continue yes or no?: ").lower()
 
 def main():
     while True:
@@ -209,10 +220,12 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
+        display_raw_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
-            break
+        while restart not in ['yes', 'no']:
+            print("Invalid input. Please enter yes or no.")
+            restart = input("Do you wish to continue yes or no?: ").lower()
 
 if __name__ == "__main__":
 	main()

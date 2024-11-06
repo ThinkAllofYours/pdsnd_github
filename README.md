@@ -1,17 +1,36 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+# Python Data Analysis Project: Bike Share Exploration
+
+## project description
+
+NanoDegree Program
 
 ### Date created
-Include the date you created this project and README file.
+
+2024-11-07 final update
 
 ### Project Title
-Replace the Project Title
+
+US Bike Share Data Analysis
 
 ### Description
-Describe what your project is about and what it does
+
+This project analyzes bike share system data from three cities: Chicago, New York, and Washington. Statistical analysis can be performed through a terminal-based interactive program.
 
 ### Files used
-Include the files used
+
+The project includes three CSV files containing datasets for each city:
+
+- Chicago.csv
+- New York City.csv
+- Washington.csv
+
+Large CSV files are excluded from version control through .gitignore.
+
+The project also includes a bikeshare.py script file for program execution.
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 
+> most important reference
+[https://pandas.pydata.org/docs/reference/api/pandas.Series.dt.hour.html](pandas.Series.dt.hour)
+
+> Reference Docs is very important docs
